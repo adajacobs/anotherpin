@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_27_224943) do
+ActiveRecord::Schema.define(version: 2021_05_13_201557) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2021_04_27_224943) do
   end
 
   create_table "order_items", force: :cascade do |t|
-    t.integer "order_id", null: false
+    t.integer "order_id"
     t.integer "product_id", null: false
     t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
@@ -75,10 +75,10 @@ ActiveRecord::Schema.define(version: 2021_04_27_224943) do
     t.string "image_4"
     t.string "image_5"
     t.integer "price"
-    t.boolean "is_featured"
+    t.boolean "is_featured", default: false
     t.string "collection_date"
     t.text "description"
-    t.boolean "is_sold_out"
+    t.boolean "is_sold_out", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

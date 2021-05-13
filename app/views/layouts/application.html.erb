@@ -17,7 +17,7 @@
           <%= link_to "Shop", products_path %>
           <%= link_to "Info", info_path %>
           <%= link_to "#" do %>
-            Cart #<%= @current_cart.id %> (0)
+            Cart #<%= @current_cart.id %> (<%= @current_cart.order_items.size %>)
           <% end %>
         </nav>
     </header>
